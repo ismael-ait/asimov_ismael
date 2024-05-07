@@ -1,0 +1,87 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>344</x><y>32</y><w>168</w><h>104</h></coordinates><panel_attributes>Scolarite
+--
+- id_scolarite : int
+- nom_classe : string
+- numero_semestre : int
+- moyenne_semestre : float
+- annee_scolaire : date
+- id_utilisateur: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>128</y><w>168</w><h>56</h></coordinates><panel_attributes>Equipe_projet
+--
+- id_equipe : int
+- id_projet : int
+- id_utilisateur : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>536</y><w>168</w><h>112</h></coordinates><panel_attributes>Projet
+--
+- id_projet : int
+- nom_projet : string
+- description_projet : string
+- date_debut : date
+- date_fin : date
+- id_responsable_projet : int
+- est_valide : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>32</y><w>168</w><h>144</h></coordinates><panel_attributes>Stage
+--
+- id : int
+- id_utilisateur : int
+- nom_entreprise : string
+- adresse_entreprise : string
+- mail_entreprise : string
+- tel_entreprise : string
+- nb_lettre : int
+- date_entretien : date
+- est_signe : bool
+- attestation : blob
+- convention : blob</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>440</y><w>168</w><h>56</h></coordinates><panel_attributes>Role
+--
+- id_role : int
+- libelle_role : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>104</y><w>104</w><h>184</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes><additional_attributes>10;10;80;10;110;210</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>64</y><w>160</w><h>224</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes><additional_attributes>10;260;30;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>224</x><y>160</y><w>352</w><h>168</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..*
+</panel_attributes><additional_attributes>10;20;100;10;420;190</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>176</y><w>40</w><h>376</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes><additional_attributes>20;10;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>232</x><y>368</y><w>344</w><h>184</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes><additional_attributes>10;210;10;100;410;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>384</y><w>176</w><h>88</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;100;40;200;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>272</y><w>168</w><h>120</h></coordinates><panel_attributes>Utilisateur
+--
+- id_utilisateur : int
+- mdp : varchar
+- nom : varchar
+- prenom : varchar
+- date_naissance : date
+- id_role : int
+- id_classe : int
+- id_responsable : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>472</x><y>496</y><w>168</w><h>136</h></coordinates><panel_attributes>Recherche_Stage
+--
+Stage
+--
+- id : int
+- id_utilisateur : int
+- nom_entreprise : string
+- adresse_entreprise : string
+- mail_entreprise : string
+- tel_entreprise : string
+- nb_lettre : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>544</x><y>384</y><w>88</w><h>128</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes><additional_attributes>90;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>280</y><w>112</w><h>128</h></coordinates><panel_attributes>lt=-
+r1=tuteur
+r2=eleve
+m1=0..1
+m2=0..*
+gère ^</panel_attributes><additional_attributes>10;130;80;130;80;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>696</x><y>528</y><w>168</w><h>56</h></coordinates><panel_attributes>Classe
+--
+- id_classe : int
+- libelle_classe : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>688</x><y>384</y><w>136</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=0..1
+</panel_attributes><additional_attributes>10;10;140;180</additional_attributes></element></diagram>
